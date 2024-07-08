@@ -1,38 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* src/App.css */
 .App {
   text-align: center;
+  font-family: "Press Start 2P";
+  font-size: 0.625rem;
+  background-color: #bbc373;
+  text-shadow: 2px 2px #ddd;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  height: 100vh;
+}
+.container h1{
+  margin-bottom: 20px;
+}
+.userview{
+  margin-right: 0.625rem;
+}
+/* src/components/Board.css */
+.Board {
+  box-shadow: 0.0625rem 1px 8px 1px #7d873a;
+  border-radius: 0.3125rem;
+  background-color: rgba(0, 0, 0, 0.082);
 }
 
-.App-link {
-  color: #61dafb;
+.Board-row {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 1.25rem;
+  padding: 0.625rem;
+  background-color: #4CAF50;
+  color: black;
+  font-weight: bold;
+  border-radius: 0.3125rem;
+}
+
+.message button {
+  margin-left: 0.625rem;
+  padding: 0.3125rem 0.625rem;
+  background-color: white;
+  border: none;
+  color: #4CAF50;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0.3125rem;
+}
+
+.message button:hover {
+  background-color: #f1f1f1;
+}
+
+/* src/components/Cell.css */
+.Cell {
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 0.0625rem solid #999;
+  border-radius: 0.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.Cell.open {
+  background-color: #ddd;
+}
+
+.Cell.flagged {
+  background-color: #f3f3f3;
+  color: red;
+}
+
+/* src/components/Timer.css */
+.Timer {
+  margin-bottom: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: bold;
 }
